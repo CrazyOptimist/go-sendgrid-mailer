@@ -36,7 +36,7 @@ func main() {
 	for _, row := range rows {
 		from := mail.NewEmail("crazyoptimist", "hey@crazyoptimist.net")
 		subject := "Sending with SendGrid is Fun"
-		to := mail.NewEmail("Dear", row[0])
+		to := mail.NewEmail("Me", row[0])
 		plainTextContent := "and easy to do anywhere, even with Go"
 		htmlContent := "<strong>and easy to do anywhere, even with Go</strong>"
 		message := mail.NewSingleEmail(from, subject, to, plainTextContent, htmlContent)
