@@ -13,7 +13,7 @@ make run
 ```
 or
 ```bash
-go run cmd/mailer/main.go
+go run cmd/mailer/*.go
 ```
 
 ## Build
