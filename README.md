@@ -16,3 +16,15 @@ or
 go run cmd/mailer/main.go
 ```
 
+## Build
+For Linux
+```bash
+make build-linux
+```
+
+For Windows
+```bash
+make build-windows
+```
+
+Created by [CrazyOptimist](https://github.com/crazyoptimist) with :heart:
