@@ -33,12 +33,13 @@ func main() {
 		return
 	}
 	client := sendgrid.NewSendClient(os.Getenv("SENDGRID_API_KEY"))
+
 	for _, row := range rows {
-		from := mail.NewEmail("crazyoptimist", "hey@crazyoptimist.net")
-		subject := "Sending with SendGrid is Fun"
+		from := mail.NewEmail(FROM_NAME, FROM_EMAIL)
+		subject := EMAIL_SUBJECT
 		to := mail.NewEmail("Me", row[0])
-		plainTextContent := "and easy to do anywhere, even with Go"
-		htmlContent := "<strong>and easy to do anywhere, even with Go</strong>"
+		plainTextContent := EMAIL_TEXT
+		htmlContent := ""
 		message := mail.NewSingleEmail(from, subject, to, plainTextContent, htmlContent)
 		response, err := client.Send(message)
 		if err != nil {
